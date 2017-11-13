@@ -7,12 +7,11 @@
   <title>先端研究デモ・ポスター展示 特設サイト | 明治大学 アカデミックフェス 2017 | Miyashita Lab</title>
   <meta name="robots" content="none,noindex,nofollow">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/5.0.0/normalize.min.css">
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bulma/0.3.0/css/bulma.min.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bulma/0.6.1/css/bulma.min.css">
   <style>
     html,
     body {
       font-size: 16px;
-      overflow: hidden;
     }
 
     a {
@@ -26,11 +25,63 @@
     .is-nowrap {
       white-space: nowrap;
     }
+
+    .img-wrapper {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: space-around;
+    }
+
+    .image {
+      display: flex;
+      justify-content: center;
+      overflow: hidden;
+      flex: 1 1 33%;
+      max-height: 25vh;
+      box-shadow: inset 0px 0px 15px 15px #fff;
+    }
+
+    .image:after {
+      position: absolute;
+      left: 0;
+      top: 0;
+      right: 0;
+      bottom: 0;
+      -moz-box-shadow: inset 0px 0px 15px 15px #fff;
+      -webkit-box-shadow: inset 0px 0px 15px 15px #fff;
+      box-shadow: inset 0px 0px 15px 15px #fff;
+      content: " ";
+    }
+
+    .image>img {
+      width: auto;
+      object-fit: cover;
+    }
+
+    .map-wrapper {
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      padding: 15px;
+    }
+
+    .map-wrapper>img {
+      max-width: 100%;
+      max-height: 100%;
+      flex: 1 0 100%;
+    }
+
+    @media screen and (max-width: 769px) {
+      .image {
+        flex: 1 1 50%;
+      }
+    }
   </style>
 </head>
 
 <body>
-  <section class="hero is-fullheight is-success is-bold">
+  <section class="hero is-success is-bold">
     <div class="hero-body">
       <div class="container">
         <h1 class="title">
@@ -42,11 +93,82 @@
           <span class="is-inline-block is-nowrap">アカデミックフェス&nbsp;</span>
           <span class="is-inline-block is-nowrap">2017</span>
         </h2>
-        <p>Coming soon...</p>
-        <p>
-          Back to
-          <a href="http://www.meiji.ac.jp/gakucho/muaf2017/">http://www.meiji.ac.jp/gakucho/muaf2017/</a>
-        </p>
+      </div>
+    </div>
+  </section>
+
+  <section>
+    <div class="container">
+      <div class="img-wrapper">
+        <div class="image">
+          <img src="./images/001.jpg" alt="image">
+        </div>
+        <div class="image">
+          <img src="./images/002.JPG" alt="image">
+        </div>
+        <div class="image">
+          <img src="./images/003.JPG" alt="image">
+        </div>
+        <div class="image">
+          <img src="./images/004.jpg" alt="image">
+        </div>
+        <div class="image">
+          <img src="./images/005.jpg" alt="image">
+        </div>
+        <div class="image">
+          <img src="./images/006.JPG" alt="image">
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="hero is-light is-bold">
+    <div class="hero-body">
+      <div class="container">
+        <table>
+          <tbody>
+            <tr>
+              <td>
+                <span class="is-inline-block is-nowrap">
+                  <strong>日時</strong>
+                </span>
+              </td>
+              <td>&nbsp;|&nbsp;</td>
+              <td>
+                <span class="is-inline-block is-nowrap">2017/11/23 13:00 ～ 18:00</span>
+              </td>
+            </tr>
+            <tr>
+              <td>
+                <span class="is-inline-block is-nowrap">
+                  <strong>場所</strong>
+                </span>
+              </td>
+              <td>&nbsp;|&nbsp;</td>
+              <td>
+                <span class="is-inline-block is-nowrap">明治大学 駿河台キャンパス&nbsp;</span>
+                <span class="is-inline-block is-nowrap">アカデミーコモン 2F ROOM D</span>
+              </td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+    </div>
+  </section>
+
+  <section class="hero is-dark is-bold">
+    <div class="hero-body">
+      <div class="container">
+        <div class="map-wrapper">
+          <p>
+            <a href="./images/map.png" target="_blank">Click to open</a>
+          </p>
+          <p>
+            <a href="./images/map.png" target="_blank">
+              <img src="./images/map.png" alt="map">
+            </a>
+          </p>
+        </div>
       </div>
     </div>
   </section>
