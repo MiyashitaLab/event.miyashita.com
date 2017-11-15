@@ -7,6 +7,8 @@
   <title>先端研究デモ・ポスター展示 特設サイト | 明治大学 アカデミックフェス 2017 | Miyashita Lab</title>
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/5.0.0/normalize.min.css">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bulma/0.6.1/css/bulma.min.css">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/kenwheeler/slick@1.8.1/slick/slick.css" />
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/kenwheeler/slick@1.8.1/slick/slick-theme.css" />
 
   <meta name="description" content="2013年から中野キャンパスで展開している総合数理学部。「数理科学」を中核とした研究を実践していますが、他分野とのコラボレーションの可能性も大いに秘めています。今回は、そうした多様性や面白さを体験してもらうべく、ポスター・デモ発表を行います。ぜひお越し下さい。">
   <meta name="twitter:card" content="summary">
@@ -28,6 +30,8 @@
       }
     }
   </script>
+  <script type="text/javascript" src="https://code.jquery.com/jquery-2.2.4.min.js"></script>
+  <script type="text/javascript" src="https://cdn.jsdelivr.net/gh/kenwheeler/slick@1.8.1/slick/slick.min.js"></script>
 
   <style>
     html,
@@ -54,11 +58,7 @@
     }
 
     .image {
-      display: flex;
-      justify-content: center;
       overflow: hidden;
-      flex: 1 1 33%;
-      max-height: 25vh;
       box-shadow: inset 0px 0px 15px 15px #fff;
     }
 
@@ -76,6 +76,8 @@
 
     .image>img {
       width: auto;
+      margin-left: auto;
+      margin-right: auto;
       object-fit: cover;
     }
 
@@ -125,7 +127,7 @@
 
   <section>
     <div class="container">
-      <div class="img-wrapper">
+      <div class="one-time">
         <div class="image">
           <img src="./images/007.jpg" alt="image">
         </div>
@@ -262,6 +264,42 @@
       </div>
     </div>
   </section>
+  <script>
+    $('.one-time').slick({
+      dots: true,
+      infinite: true,
+      speed: 300,
+      slidesToShow: 4,
+      slidesToScroll: 1,
+      adaptiveHeight: true,
+      autoplay: true,
+      autoplaySpeed: 1500,
+      responsive: [
+        {
+          breakpoint: 1024,
+          settings: {
+            slidesToShow: 3,
+            slidesToScroll: 1,
+            infinite: true,
+            dots: true
+          }
+        },
+        {
+          breakpoint: 600,
+          settings: {
+            slidesToShow: 2,
+            slidesToScroll: 1
+          }
+        },
+        {
+          breakpoint: 480,
+          settings: {
+            slidesToShow: 1,
+            slidesToScroll: 1
+          }
+        }]
+    });
+  </script>
 </body>
 
 </html>
