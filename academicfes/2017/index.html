@@ -7,6 +7,7 @@
   <title>先端研究デモ・ポスター展示 特設サイト | 明治大学 アカデミックフェス 2017 | Miyashita Lab</title>
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/5.0.0/normalize.min.css">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bulma/0.6.1/css/bulma.min.css">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/kenwheeler/slick@1.8.1/slick/slick.css" />
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/kenwheeler/slick@1.8.1/slick/slick-theme.css" />
 
@@ -40,7 +41,21 @@
     }
 
     a {
-      text-decoration: underline;
+      text-decoration: none;
+      border-bottom: 1px solid;
+    }
+
+    a:hover {
+      opacity: 0.75;
+    }
+
+    a::after {
+      content: "\f08e";
+      font-family: "FontAwesome";
+      font-size: 75.5%;
+      vertical-align: top;
+      position: relative;
+      top: -0.1em;
     }
 
     .container * {
@@ -117,9 +132,11 @@
           <span class="is-inline-block is-nowrap">特設サイト</span>
         </h1>
         <h2 class="subtitle">
-          <span class="is-inline-block is-nowrap">明治大学&nbsp;</span>
-          <span class="is-inline-block is-nowrap">アカデミックフェス&nbsp;</span>
-          <span class="is-inline-block is-nowrap">2017</span>
+          <a href="http://www.meiji.ac.jp/gakucho/muaf2017/program/index.html" target="_blank">
+            <span class="is-inline-block is-nowrap">明治大学&nbsp;</span>
+            <span class="is-inline-block is-nowrap">アカデミックフェス&nbsp;</span>
+            <span class="is-inline-block is-nowrap">2017</span>
+          </a>
         </h2>
       </div>
     </div>
@@ -274,8 +291,7 @@
       adaptiveHeight: true,
       autoplay: true,
       autoplaySpeed: 1500,
-      responsive: [
-        {
+      responsive: [{
           breakpoint: 1024,
           settings: {
             slidesToShow: 3,
@@ -297,7 +313,8 @@
             slidesToShow: 1,
             slidesToScroll: 1
           }
-        }]
+        }
+      ]
     });
   </script>
 </body>
