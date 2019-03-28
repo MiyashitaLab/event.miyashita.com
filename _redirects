@@ -1,0 +1,6 @@
+# Redirect default Netlify subdomain to primary domain
+http://event-miyashita.netlify.com/* https://event.miyashita.com/:splat 301!
+https://event-miyashita.netlify.com/* https://event.miyashita.com/:splat 301!
+
+/10thaniv/    /anniversary/10th/   301
+/10thanniv/   /anniversary/10th/   301
